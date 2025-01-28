@@ -5,8 +5,9 @@ Minimal example for rapid sandboxed testing.
 
 ## Usage
 
-Run `./gradlew asciidoctor asciidoctorPdf` (or use `gradlew.bat` on Windows).
-You'll need all dependencies installed for this to work: Java, for example.
+`gradle asciidoctor asciidoctorPdf`
+
+You'll need all dependencies installed for this to work, e.g. Java 17 and Gradle.
 
 You can also run it from Docker with `./build.sh` (no Windows batch script yet).
 This is useful for using/testing specific dependencies.
