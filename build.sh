@@ -14,4 +14,4 @@ cd "$SCRIPT_DIR"
 # --progress=plain
 docker build -t tinytest-docs-builder .
 
-docker run --rm -it -v "$(pwd):/tinytestdoc" --user "$(id -u):$(id -g)" tinytest-docs-builder ./internal-build.sh
+docker run --rm -v "$(pwd):/tinytestdoc" --user "$(id -u):$(id -g)" tinytest-docs-builder ./internal-build.sh
