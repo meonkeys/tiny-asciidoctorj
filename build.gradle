@@ -1,0 +1,50 @@
+plugins {
+    id 'org.asciidoctor.jvm.convert' version '4.0.3'
+    id 'org.asciidoctor.jvm.pdf' version '4.0.3'
+}
+
+repositories {
+    mavenCentral()
+}
+
+asciidoctorj {
+    //version = '3.0.0'
+
+    attributes = [
+        version: '0.0.129-beta',
+        docdate: new Date(),
+        rootdir: "${rootDir}".toString(),
+        baseurl: 'adammonsen.com',
+    ]
+
+    //modules {
+    //    pdf.version '2.3.18'
+    //    diagram.version '2.3.1'
+    //}
+
+    //fatalWarnings ~/include file not found|missing callout|image to embed not found or not readable/
+    //fatalWarnings missingIncludes()
+}
+
+asciidoctor {
+    //executionMode OUT_OF_PROCESS
+    logDocuments true
+    //languages 'en'
+
+    //baseDir 'src'
+    //sourceDir 'src'
+    //sources {
+    //    include('index.adoc')
+    //}
+    //outputDir 'build/html'
+
+    //logging.captureStandardError LogLevel.INFO
+}
+
+//task doc() {
+//    dependsOn(asciidoctor)
+//}
+
+asciidoctorPdf {
+    logDocuments true
+}
